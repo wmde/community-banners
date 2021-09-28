@@ -77,33 +77,14 @@ tracking = "WMDE_challengebnr_fall2020_ctrl_m"
 
 # Occasional Editors Campaign
 [occasional]
-campaign_tracking = "WMDE_oceditors_spring_2020"
+campaign_tracking = "WMDE_oceditors_fall_2021"
 preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
 wrapper_template = "wikipedia_org"
 
-[occasional.banners.ctrl_a]
+[occasional.banners.ctrl]
 filename = "./occasional_editors/banner_ctrl.js"
-pagename = "B20WMDE_oceditors_spring_2020_ctrl_a"
-tracking = "WMDE_oceditors_spring_2020_ctrl"
-test_flags = "logged_in|group_a"
-
-[occasional.banners.ctrl_b]
-filename = "./occasional_editors/banner_ctrl.js"
-pagename = "B20WMDE_oceditors_spring_2020_ctrl_b"
-tracking = "WMDE_oceditors_spring_2020_ctrl"
-test_flags = "logged_in|group_b"
-
-[occasional.banners.var_a]
-filename = "./occasional_editors/banner_var.js"
-pagename = "B20WMDE_oceditors_spring_2020_var_a"
-tracking = "WMDE_oceditors_spring_2020_var"
-test_flags = "logged_in|group_a"
-
-[occasional.banners.var_b]
-filename = "./occasional_editors/banner_var.js"
-pagename = "B20WMDE_oceditors_spring_2020_var_b"
-tracking = "WMDE_oceditors_spring_2020_var"
-test_flags = "logged_in|group_b"
+pagename = "B21WMDE_oceditors_fall_2021"
+tracking = "WMDE_oceditors_fall_2021_ctrl"
 
 # Techwish Campaign
 [techwish]
