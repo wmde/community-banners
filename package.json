@@ -38,7 +38,7 @@
     "jquery": "^3.6.0",
     "minimatch": "^5.0.0",
     "postcss": "^8.4.8",
-    "postcss-custom-properties": "^12.1.4",
+    "postcss-custom-properties": "^12.1.5",
     "postcss-loader": "^4.3.0",
     "postcss-nested": "^5.0.6",
     "style-loader": "^2.0.0",
