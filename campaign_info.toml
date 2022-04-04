@@ -1,3 +1,44 @@
+# Wikipedia-Paidwriting
+[paidwriting]
+campaign_tracking = "WMDE_paid_editing_survey"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[paidwriting.banners.ctrl]
+filename = "./wikipedia_paidwriting/banner_ctrl.js"
+pagename = "B22WMDE_paid_editing_survey"
+tracking = "WMDE_paid_editing_survey"
+
+[paidwriting_monobook]
+campaign_tracking = "WMDE_paid_editing_survey"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=monobook&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[paidwriting_monobook.banners.ctrl]
+filename = "./wikipedia_paidwriting/banner_ctrl.js"
+pagename = "B22WMDE_paid_editing_survey_b1_monobook"
+tracking = "WMDE_paid_editing_survey_b1_monobook"
+
+[paidwriting_minerva]
+campaign_tracking = "WMDE_paid_editing_survey"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[paidwriting_minerva.banners.ctrl]
+filename = "./wikipedia_paidwriting/banner_ctrl.js"
+pagename = "B22WMDE_paid_editing_survey_b1_minerva"
+tracking = "WMDE_paid_editing_survey_b1_minerva"
+
+[paidwriting_timeless]
+campaign_tracking = "WMDE_paid_editing_survey"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=timeless&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[paidwriting_timeless.banners.ctrl]
+filename = "./wikipedia_paidwriting/banner_ctrl.js"
+pagename = "B22WMDE_paid_editing_survey_b1_timeless"
+tracking = "WMDE_paid_editing_survey_b1_timeless"
+
 # Wikipedia-Aktionswoche
 [aktionswoche]
 campaign_tracking = "WMDE_wp20_aw"
