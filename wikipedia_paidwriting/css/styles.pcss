@@ -1,0 +1,174 @@
+:root {
+	--banner-color-primary: #ee8019;
+	--banner-color-secondary: #ffffff;
+	--banner-color-outline: #919191;
+	--banner-color-black: #222222;
+	--banner-color-white: #ffffff;
+	--banner-color-blue: #0645ad;
+	--banner-color-bg: #f6f6f6;
+}
+
+.paidwriting-banner {
+	background-color: var( --banner-color-bg );
+	font-stretch: normal;
+	font-style: normal;
+	z-index: 95;
+	width: 100%;
+	text-align: left;
+	overflow: hidden;
+	display: none;
+	position: relative;
+
+	.mobile-break {
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	&-wrapper {
+		height: 100%;
+		text-align: left;
+		align-items: left;
+		padding-top: 97px;
+		padding-left: 49px;
+		padding-bottom: 0;
+	}
+
+	&-title {
+		color: var( --banner-color-black );
+		font-family: 'Tahoma', 'Helvetica', sans-serif;
+		font-size: calc( 13px + 0.375vw );  /* fallback */
+		font-size: clamp( 14px, 13px + 0.375vw, 20px );
+		font-weight: bold;
+		line-height: 22px;
+		margin-left: 1px;
+		letter-spacing: 0.5px;
+	}
+
+	&-banner {
+		color: var( --banner-color-black );
+		width: 90%;
+		margin-top: 12px;
+		font-family: 'Georgia', serif;
+		font-size: calc( 23px + 1vw );  /* fallback */
+		font-size: clamp( 26px, 23px + 1vw, 42px );
+		font-weight: normal;
+		line-height: 140%;
+		letter-spacing: 0.5px;
+	}
+
+	&-button {
+		color: var( --banner-color-blue );
+		padding: 8px 0 7px;
+		margin-top: 23px;
+		text-align: center;
+		font-family: 'Tahoma', 'Helvetica', sans-serif;
+		font-size: calc( 13px + 0.375vw );  /* fallback */
+		font-size: clamp( 14px, 13px + 0.375vw, 20px );
+		font-weight: bold;
+		display: inline-block;
+		margin-bottom: 50px;
+		margin-left: 1px;
+		border: solid 2px var( --banner-color-blue );
+		transition: transform 500ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			transform: scale( 1.05 );
+		}
+	}
+
+	&-close {
+		a {
+			position: absolute;
+			right: 32px;
+			top: 32px;
+			width: 32px;
+			height: 32px;
+			opacity: 0.3;
+			transition: opacity 500ms ease-in-out;
+		}
+		a:hover {
+			opacity: 1;
+		}
+		a:before,
+		a:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 33px;
+			width: 2px;
+			background-color: var( --banner-color-blue );
+		}
+		a:before {
+			transform: rotate( 45deg );
+		}
+		a:after {
+			transform: rotate( -45deg );
+		}
+	}
+}
+
+@media ( min-width: 600px ) {
+	.paidwriting-banner {
+
+		&-wrapper {
+			padding-top: 81px;
+			padding-left: 50px;
+		}
+
+		&-title {
+			line-height: 120%;
+		}
+
+		&-banner {
+			margin-top: 12px;
+			line-height: 140%;
+			width: 80%;
+		}
+
+		&-button {
+			margin-top: 33px;
+			margin-bottom: 50px;
+			padding: 11px 20px;
+		}
+	}
+
+	.skin-minerva {
+		.paidwriting-banner {
+			&-text {
+				width: auto;
+			}
+		}
+	}
+}
+
+@media ( min-width: 1000px ) {
+	.paidwriting-banner {
+
+		&-wrapper {
+			width: 80%;
+			padding-top: 56px;
+			padding-left: 67px;
+			padding-right: 100px;
+			margin-bottom: 55px;
+		}
+
+		&-title {
+			margin-left: 3px;
+		}
+
+		&-banner {
+			margin-top: 12px;
+			max-width: 85%;
+		}
+
+		&-button {
+			position: absolute;
+			bottom: 0;
+			right: 44px;
+		}
+	}
+}
