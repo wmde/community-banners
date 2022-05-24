@@ -2,6 +2,7 @@ module.exports = {
 	plugins: {
 		'autoprefixer': {},
 		'postcss-nested': {},
-		'postcss-custom-properties': {}
+		'postcss-custom-properties': {},
+		'postcss-simple-vars': {}
 	}
 };
