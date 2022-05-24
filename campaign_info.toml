@@ -1,3 +1,44 @@
+# Carto-Season
+[carto_week]
+campaign_tracking = "WMDE_carto_week_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[carto_week.banners.ctrl]
+filename = "./carto_season/banner_ctrl.js"
+pagename = "B22WMDE_carto_week"
+tracking = "WMDE_carto_week"
+
+[carto_week_monobook]
+campaign_tracking = "WMDE_carto_week"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=monobook&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[carto_week_monobook.banners.ctrl]
+filename = "./carto_season/banner_ctrl.js"
+pagename = "B22WMDE_carto_week_b1_monobook"
+tracking = "WMDE_carto_week_b1_monobook"
+
+[carto_week_minerva]
+campaign_tracking = "WMDE_carto_week"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[carto_week_minerva.banners.ctrl]
+filename = "./carto_season/banner_ctrl.js"
+pagename = "B22WMDE_carto_week_b1_minerva"
+tracking = "WMDE_carto_week_b1_minerva"
+
+[carto_week_timeless]
+campaign_tracking = "WMDE_carto_week"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=timeless&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[carto_week_timeless.banners.ctrl]
+filename = "./carto_season/banner_ctrl.js"
+pagename = "B22WMDE_carto_week_b1_timeless"
+tracking = "WMDE_carto_week_b1_timeless"
+
 # Wikipedia-Paidwriting
 [paidwriting]
 campaign_tracking = "WMDE_paid_editing_survey"
