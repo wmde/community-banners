@@ -1,0 +1,14 @@
+<!-- WMDE compiled banner, see https://github.com/wmde/fundraising-banners -->
+{{#with campaignConfig }}
+    <div id="WMDE-Banner-Container"
+         data-trackingparams="piwik_campaign={{campaign_tracking}}&amp;piwik_kwd={{tracking}}"
+         data-campaign-tracking="{{campaign_tracking}}"
+         data-tracking="{{tracking}}"
+    ></div>
+	<span style="display:none;" id="WMDE-Banner-wikidata-10-copy">\{{{WMDE_wikidata_10_copy}}}</span>
+	<span style="display:none;" id="WMDE-Banner-wikidata-10-button-schedule">\{{{WMDE_wikidata_10_button_schedule_text}}}</span>
+	<span style="display:none;" id="WMDE-Banner-wikidata-10-button-event">\{{{WMDE_wikidata_10_button_event_text}}}</span>
+{{/with}}
+<nowiki>
+    <script>{{{ banner }}}</script>
+</nowiki>
