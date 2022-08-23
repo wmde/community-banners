@@ -1,3 +1,44 @@
+# Wikidata 10
+[wikidata_10_cc]
+campaign_tracking = "WMDE_wikidata_10_cc_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org_wikidata_10_cc"
+
+[wikidata_10_cc.banners.ctrl]
+filename = "./wikidata_10_cc/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_cc"
+tracking = "WMDE_wikidata_10_cc"
+
+[wikidata_10_cc_monobook]
+campaign_tracking = "WMDE_wikidata_10_cc_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=monobook&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org_wikidata_10_cc"
+
+[wikidata_10_cc_monobook.banners.ctrl]
+filename = "./wikidata_10_cc/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_cc_monobook"
+tracking = "WMDE_wikidata_10_cc_monobook"
+
+[wikidata_10_cc_minerva]
+campaign_tracking = "WMDE_wikidata_10_cc_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org_wikidata_10_cc"
+
+[wikidata_10_cc_minerva.banners.ctrl]
+filename = "./wikidata_10_cc/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_cc_minerva"
+tracking = "WMDE_wikidata_10_cc_minerva"
+
+[wikidata_10_cc_timeless]
+campaign_tracking = "WMDE_wikidata_10_cc_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=timeless&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org_wikidata_10_cc"
+
+[wikidata_10_cc_timeless.banners.ctrl]
+filename = "./wikidata_10_cc/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_cc_timeless"
+tracking = "WMDE_wikidata_10_cc_timeless"
+
 # Carto-Season
 [carto_week]
 campaign_tracking = "WMDE_carto_week_2022"
