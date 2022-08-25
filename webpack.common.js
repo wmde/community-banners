@@ -2,18 +2,14 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const toml = require( 'toml' );
 const webpack = require( 'webpack' );
-const MediaWikiTextWrapper = require( './webpack/mediawiki_text_wrapper' );
+
 const CampaignConfig = require( './webpack/campaign_config' );
-
 const campaigns = new CampaignConfig( toml.parse( fs.readFileSync( 'campaign_info.toml', 'utf8' ) ) );
-
-function readWrapperTemplate( name ) {
-	return fs.readFileSync( './webpack/wikitext_templates/' + name + '.hbs', 'utf8' );
-}
 
 module.exports = {
 	entry: campaigns.getEntryPoints(),
 	output: {
+		publicPath: '',
 		filename: '[name].js',
 		path: path.resolve( __dirname, 'dist' )
 	},
@@ -51,20 +47,17 @@ module.exports = {
 			}
 		]
 	},
+	resolve: {
+		fallback: {
+			path: false
+		}
+	},
 	externals: {
 		jquery: 'jQuery'
 	},
 	plugins: [
 		new webpack.ProvidePlugin( {
 			jQuery: 'jquery'
-		} ),
-		new MediaWikiTextWrapper( {
-			templates: campaigns.getWrapperTemplates( readWrapperTemplate ),
-			context: {
-				bannerValues: '{{MediaWiki:WMDE_FR2017/Resources/BannerValues.js}}'
-			},
-			filePattern: 'B*.js',
-			campaignConfig: campaigns.getConfigForPages()
 		} )
 	]
 };
