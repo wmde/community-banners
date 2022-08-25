@@ -3,9 +3,9 @@ const toml = require( 'toml' );
 const { merge } = require( 'webpack-merge' );
 const CommonConfig = require( './webpack.common.js' );
 const webpack = require( 'webpack' );
+const path = require( 'path' );
 
 module.exports = merge( CommonConfig, {
-	devtool: 'source-map',
 	mode: 'development',
 	entry: {
 		loader: './webpack/loader.js'
@@ -17,13 +17,18 @@ module.exports = merge( CommonConfig, {
 		} )
 	],
 	devServer: {
-		port: 8085,
-		hot: true,
-		contentBase: './dist',
-		headers: {
+		'port': 8085,
+		'hot': true,
+		'allowedHosts': 'all',
+		'static': {
+			directory: path.resolve( __dirname, 'dist' ),
+			publicPath: '/',
+			serveIndex: false
+		},
+		'headers': {
 			'Access-Control-Allow-Origin': '*'
 		},
-		proxy: [
+		'proxy': [
 			{
 				context: [ '/wikipedia.de', '/FundraisingBanners', '/img', '/js', '/style.css', '/suggest.js' ],
 				pathRewrite: { '^/wikipedia.de': '' },
