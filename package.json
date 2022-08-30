@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.18.10",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
-    "core-js": "^3.24.1",
+    "core-js": "^3.25.0",
     "css-loader": "^5.2.7",
     "eslint": "^8.22.0",
     "eslint-config-wikimedia": "^0.23.0",
