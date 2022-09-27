@@ -9,35 +9,45 @@ filename = "./wikidata_10_cc/banner_ctrl.js"
 pagename = "B22WMDE_wikidata_10_cc"
 tracking = "WMDE_wikidata_10_cc"
 
-[wikidata_10_cc_monobook]
-campaign_tracking = "WMDE_wikidata_10_cc_2022"
+[wikidata_10]
+campaign_tracking = "WMDE_wikidata_10_2022"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org_wikidata_10"
+
+[wikidata_10.banners.ctrl]
+filename = "./wikidata_10/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10"
+tracking = "WMDE_wikidata_10"
+
+[wikidata_10_monobook]
+campaign_tracking = "WMDE_wikidata_10_2022"
 preview_link = "/wiki/Wikipedia:Hauptseite?useskin=monobook&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
-wrapper_template = "wikipedia_org_wikidata_10_cc"
+wrapper_template = "wikipedia_org_wikidata_10"
 
-[wikidata_10_cc_monobook.banners.ctrl]
-filename = "./wikidata_10_cc/banner_ctrl.js"
-pagename = "B22WMDE_wikidata_10_cc_monobook"
-tracking = "WMDE_wikidata_10_cc_monobook"
+[wikidata_10_monobook.banners.ctrl]
+filename = "./wikidata_10/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_monobook"
+tracking = "WMDE_wikidata_10_monobook"
 
-[wikidata_10_cc_minerva]
-campaign_tracking = "WMDE_wikidata_10_cc_2022"
+[wikidata_10_minerva]
+campaign_tracking = "WMDE_wikidata_10_2022"
 preview_link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
-wrapper_template = "wikipedia_org_wikidata_10_cc"
+wrapper_template = "wikipedia_org_wikidata_10"
 
-[wikidata_10_cc_minerva.banners.ctrl]
-filename = "./wikidata_10_cc/banner_ctrl.js"
-pagename = "B22WMDE_wikidata_10_cc_minerva"
-tracking = "WMDE_wikidata_10_cc_minerva"
+[wikidata_10_minerva.banners.ctrl]
+filename = "./wikidata_10/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_minerva"
+tracking = "WMDE_wikidata_10_minerva"
 
-[wikidata_10_cc_timeless]
-campaign_tracking = "WMDE_wikidata_10_cc_2022"
+[wikidata_10_timeless]
+campaign_tracking = "WMDE_wikidata_10_2022"
 preview_link = "/wiki/Wikipedia:Hauptseite?useskin=timeless&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
-wrapper_template = "wikipedia_org_wikidata_10_cc"
+wrapper_template = "wikipedia_org_wikidata_10"
 
-[wikidata_10_cc_timeless.banners.ctrl]
-filename = "./wikidata_10_cc/banner_ctrl.js"
-pagename = "B22WMDE_wikidata_10_cc_timeless"
-tracking = "WMDE_wikidata_10_cc_timeless"
+[wikidata_10_timeless.banners.ctrl]
+filename = "./wikidata_10/banner_ctrl.js"
+pagename = "B22WMDE_wikidata_10_timeless"
+tracking = "WMDE_wikidata_10_timeless"
 
 # Carto-Season
 [carto_week]
