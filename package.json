@@ -35,7 +35,7 @@
     "html-loader": "^1.3.2",
     "jquery": "^3.6.1",
     "minimatch": "^5.1.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.17",
     "postcss-custom-properties": "^12.1.9",
     "postcss-simple-vars": "^7.0.0",
     "postcss-loader": "^4.3.0",
