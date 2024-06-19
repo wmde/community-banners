@@ -1,0 +1,7 @@
+{
+	"watch": [
+		"webpack.config.js",
+		"banners.toml"
+	],
+	"exec": "webpack serve --host 0.0.0.0"
+}

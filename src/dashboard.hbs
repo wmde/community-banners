@@ -1,0 +1,7 @@
+<h1>Select a Banner</h1>
+
+<ul>
+	{{#each banners as |banner bannerName| }}
+		<li><a href="{{ bannerlink banner.link bannerName }}" target="_blank">{{ banner.name }}</a></li>
+	{{/each}}
+</ul>

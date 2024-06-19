@@ -1,0 +1,5 @@
+[sample_banner]
+name = "Sample Banner"
+description = "This is a sample banner you can copy and paste to base your other banners from"
+link = "/wiki/Wikipedia:Hauptseite?devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
+filename = "./banners/sample/banner.js"
