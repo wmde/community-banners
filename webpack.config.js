@@ -36,7 +36,6 @@ module.exports = {
 		port: 8085,
 		hot: true,
 		allowedHosts: 'all',
-		historyApiFallback: true,
 		static: {
 			directory: path.resolve( __dirname, 'dist' ),
 			publicPath: '/',
@@ -47,10 +46,15 @@ module.exports = {
 		},
 		proxy: [
 			{
+				context: [ '/wikidata' ],
+				target: 'https://www.wikidata.org',
+				changeOrigin: true
+			},
+			{
 				context: [ '/wiki', '/w', '/static' ],
 				target: 'https://de.wikipedia.org',
 				changeOrigin: true
-			}
+			},
 		]
 	},
 	module: {
