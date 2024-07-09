@@ -106,7 +106,7 @@
 		border-radius: 2px;
 		height: 40px;
 		line-height: 40px;
-		font-size: 14px;
+		font-size: 16px;
 
 		&:hover,
 		&:focus {
@@ -125,6 +125,7 @@
 			margin-bottom: 4px;
 			height: 32px;
 			line-height: 32px;
+			font-size: 14px;
 		}
 	}
 
@@ -153,7 +154,8 @@
 		width: .01em !important;
 	}
 </style>
-<div class="wmde-b" aria-live="polite">
+<div class="wmde-b" aria-live="polite" role="region" aria-labelledby="wmde-b-aria-label">
+	<span id="wmde-b-aria-label" style="display: none;">{{{WMDE_banner_accessible_description}}}</span>
 	<button class="wmde-b-close" onclick="mw.centralNotice.hideBanner(); return false;">
 		<span class="wmde-b-sr-only">{{{WMDE_banner_hide}}}</span>
 		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -162,7 +164,7 @@
 		</svg>
 	</button>
 	<div class="wmde-b-image">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/WMDE_Wikidata_Community_Survey_Banner_Illustration_2024.svg" alt="{{{WMDE_banner_image_alt_description}}}">
+		<img aria-hidden="true" src="https://upload.wikimedia.org/wikipedia/commons/1/12/WMDE_Wikidata_Community_Survey_Banner_Illustration_2024.svg" alt="">
 	</div>
 	<div class="wmde-b-content">
 		<h2>{{{WMDE_banner_title}}}</h2>
@@ -179,6 +181,6 @@
 			</span>
 			{{{WMDE_banner_button}}}
 		</a>
-		<a href="https://www.wikimedia.de/datenschutz/" class="wmde-b-cta-privacy">{{{WMDE_banner_privacy}}}</a>
+		<a href="https://www.wikidata.org/wiki/Wikidata:Usability_and_usefulness/2024-Community-Survey" class="wmde-b-cta-privacy">{{{WMDE_banner_privacy}}}</a>
 	</div>
 </div>
