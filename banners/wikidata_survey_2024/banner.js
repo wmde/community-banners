@@ -2,11 +2,11 @@ import text from './Banner.html';
 let html = String( text );
 
 const translations = {
+	'{{{WMDE_banner_accessible_description}}}' : 'Community survey announcement',
 	'{{{WMDE_banner_hide}}}' : 'Hide Banner',
 	'{{{WMDE_banner_title}}}' : 'The Wikidata Community in 2024',
 	'{{{WMDE_banner_button}}}' : 'Take the survey',
 	'{{{WMDE_banner_privacy}}}' : 'privacy statement',
-	'{{{WMDE_banner_image_alt_description}}}' : 'A picture of 2 people standing in front of a cloud of Wikidata item ids one of whom is waving',
 	'{{{WMDE_banner_sentence_1}}}' : 'Curious to learn who uses and edits Wikidata? So is Wikimedia Deutschland! Take a 10-minute anonymous survey to help us better understand the Wikidata community.',
 	'{{{WMDE_banner_sentence_2_start}}}' : 'Available in',
 	'{{{WMDE_banner_sentence_2_and}}}' : 'and',
