@@ -12,8 +12,10 @@
 		font-family: var( --font-family );
 		margin: 0 0 8px;
 		text-align: left;
+	}
 
-		@media ( min-width: 880px ) {
+	@media ( min-width: 880px ) {
+		.wmde-b{
 			display: flex;
 			padding-right: 64px;
 		}
@@ -32,24 +34,25 @@
 		background: none;
 		cursor: pointer;
 		transition: background-color 200ms ease-in-out;
-
-		&:hover,
-		&:focus {
-			background: #f8f9fa;
-		}
 	}
 
+	.wmde-b-close:hover,
+	.wmde-b-close:focus {
+		background: #f8f9fa;
+	}
 
 	.wmde-b-image {
 		padding-right: 48px;
 		margin-bottom: 16px;
 		text-align: center;
+	}
 
-		img {
-			max-width: 138px;
-		}
+	.wmde-b-image img {
+		max-width: 138px;
+	}
 
-		@media ( min-width: 880px ) {
+	@media ( min-width: 880px ) {
+		.wmde-b-image {
 			flex: 0 0 138px;
 			padding-right: 0;
 			margin-bottom: 0;
@@ -60,23 +63,25 @@
 	.wmde-b-content {
 		margin-bottom: 16px;
 		line-height: 1.6em;
+	}
 
-		h2 {
-			font-family: var( --font-family );
-			font-weight: bold;
-			font-size: 16px;
-			margin: 0 0 8px;
-			border: 0;
-			padding: 0;
-		}
+	.wmde-b-content h2 {
+		font-family: var( --font-family );
+		font-weight: bold;
+		font-size: 16px;
+		margin: 0 0 8px;
+		border: 0;
+		padding: 0;
+	}
 
-		p {
-			font-size: 14px;
-			padding: 0;
-			margin: 0;
-		}
+	.wmde-b-content p {
+		font-size: 14px;
+		padding: 0;
+		margin: 0;
+	}
 
-		@media ( min-width: 880px ) {
+	@media ( min-width: 880px ) {
+		.wmde-b-content{
 			flex: 1 1 auto;
 			margin-bottom: 0;
 			padding: 0 var( --column-gutter );
@@ -107,21 +112,23 @@
 		height: 40px;
 		line-height: 40px;
 		font-size: 16px;
+	}
 
-		&:hover,
-		&:focus {
-			text-decoration: none;
-			background: #447ff5;
+	.wmde-b-cta-button:hover,
+	.wmde-b-cta-button:focus {
+		text-decoration: none;
+		background: #447ff5;
 
-		}
+	}
 
-		&:visited,
-		&:hover:visited,
-		&:focus:visited {
-			color: #fff;
-		}
+	.wmde-b-cta-button:visited,
+	.wmde-b-cta-button:hover:visited,
+	.wmde-b-cta-button:focus:visited {
+		color: #fff;
+	}
 
-		@media ( min-width: 880px ) {
+	@media ( min-width: 880px ) {
+		.wmde-b-cta-button{
 			margin-bottom: 4px;
 			height: 32px;
 			line-height: 32px;
