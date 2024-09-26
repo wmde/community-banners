@@ -46,5 +46,5 @@ const translations = {
 
 Object.keys( translations ).forEach( key => html = html.replace( key, translations[ key ] ) );
 
-document.getElementById( 'WMDE-comunity-dev-banner' ).innerHTML = html;
+document.getElementById( 'WMDE-community-dev-banner' ).innerHTML = html;
 ```

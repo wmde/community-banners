@@ -33,18 +33,18 @@ module.exports = {
 		} )
 	],
 	devServer: {
-		port: 8085,
-		hot: true,
-		allowedHosts: 'all',
-		static: {
+		'port': 8085,
+		'hot': true,
+		'allowedHosts': 'all',
+		'static': {
 			directory: path.resolve( __dirname, 'dist' ),
 			publicPath: '/',
 			serveIndex: false
 		},
-		headers: {
+		'headers': {
 			'Access-Control-Allow-Origin': '*'
 		},
-		proxy: [
+		'proxy': [
 			{
 				context: [ '/wikidata' ],
 				target: 'https://www.wikidata.org',
@@ -54,7 +54,7 @@ module.exports = {
 				context: [ '/wiki', '/w', '/static' ],
 				target: 'https://de.wikipedia.org',
 				changeOrigin: true
-			},
+			}
 		]
 	},
 	module: {
@@ -69,6 +69,6 @@ module.exports = {
 					{ loader: 'handlebars-loader' }
 				]
 			}
-		],
+		]
 	}
 };

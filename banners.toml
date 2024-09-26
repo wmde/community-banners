@@ -2,12 +2,12 @@
 name = "Sample Banner"
 description = "This is a sample banner you can copy and paste to base your other banners from"
 link = "/wiki/Wikipedia:Hauptseite?devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
-filename = "./banners/sample/banner.js"
+filename = "./banners/sample/devBanner.js"
 ticket = "https://phabricator.wikimedia.org/T366881"
 
 [wikidata_survey_2024]
 name = "Wikidata Survey 2024"
 description = "Community survey banner for 2024 (https://www.figma.com/design/ThTdvrRhq7Qqmu6slFN1HM/Wikidata-banner-design?node-id=44-473&t=Jf8t8TsgUoGR03sX-0)"
 link = "/wikidata/Wikidata:Main_Page?devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
-filename = "./banners/wikidata_survey_2024/banner.js"
+filename = "./banners/wikidata_survey_2024/devBanner.js"
 ticket = "https://phabricator.wikimedia.org/T366881"

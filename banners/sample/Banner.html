@@ -1,1 +1,123 @@
-<h1 style="font-size: 50px">I HAVE LOADED A BANNER!</h1>
+<style>
+	.wmde-b {
+		display: none;
+		background: #e29898;
+		border: 1px solid #c01111;
+		padding: 20px;
+	}
+	.wmde-b.visible {
+		display: block;
+	}
+</style>
+
+<div class="wmde-b" id="wmde-banner">
+	<button onclick="closeClickEvent()">{{{WMDE_Sample_Banner_Close}}}</button>
+	<h1 style="font-size: 50px;">{{{WMDE_Sample_Banner_Heading}}}</h1>
+	<button onclick="trackedClickEvent()">{{{WMDE_Sample_Banner_Button}}}</button>
+</div>
+
+<script>
+	class ImpressionCounter {
+		constructor( bannerName ) {
+			this.itemName = 'banner_impressions-' + bannerName;
+			this.overallCount = 0;
+			if ( !window.localStorage ) {
+				return;
+			}
+			const overallCount = window.localStorage.getItem( this.itemName ) || '0';
+			this.overallCount = parseInt( overallCount, 10 );
+		}
+
+		incrementImpressionCount() {
+			this.overallCount++;
+			if ( !window.localStorage ) {
+				return;
+			}
+			window.localStorage.setItem( this.itemName, this.overallCount.toFixed( 0 ) );
+		}
+
+		getImpressionCount() {
+			if ( !window.localStorage ) {
+				return 0;
+			}
+			let impressions = window.localStorage.getItem( this.itemName );
+			if ( impressions === null ) {
+				impressions = 0;
+				window.localStorage.setItem( this.itemName, '0' );
+			}
+			return parseInt( impressions );
+		}
+	}
+
+	const BANNER_SEEN_TRACK_RATIO = 1;
+	const BANNER_CLICK_TRACK_RATIO = 1;
+	const BANNER_CLOSE_TRACK_RATIO = 1;
+	const bannerName = 'sample_banner_2024';
+	const banner = document.getElementById( 'wmde-banner' );
+	const impressionCounter = new ImpressionCounter( bannerName );
+
+	const trackEvent = ( trackingRatio, actionName ) => {
+		if ( Math.random() < trackingRatio ) {
+			mw.track( 'event.WMDEBannerInteractions', {
+				bannerName: bannerName,
+				bannerAction: actionName,
+				bannerImpressions: impressionCounter.getImpressionCount(),
+				userID: mw.user.getId()
+			} );
+		}
+	}
+
+	/**
+	 * This contains examples of how you might target a banner at a group of wikipedians.
+	 *
+	 * You can look through the mw object on wikipedia using the browser console for a more
+	 * comprehensive list of items stored about a person.
+	 *
+	 * @returns {boolean}
+	 */
+	const shouldShowBanner = () => {
+		const urlParams = new URLSearchParams( window.location.search );
+		const pageName = mw.config.get( 'wgPageName' );
+		const loggedIn = mw.config.get( 'wgUserRegistration' );
+		const editCount = mw.config.get( 'wgUserEditCount' );
+
+		if ( urlParams.has( 'banner' ) ) {
+			return true;
+		}
+
+		if ( pageName === 'Wikipedia:A_NON_EXISTENT_PAGE' ) {
+			return false;
+		}
+
+		if ( !loggedIn ) {
+			return false;
+		}
+
+		if ( editCount < 1 || editCount > 200 ) {
+			return false;
+		}
+
+		if ( impressionCounter.getImpressionCount() >= 10 ) {
+			return false;
+		}
+
+		return true;
+	};
+
+	if ( shouldShowBanner() ) {
+		banner.classList.add( 'visible' );
+		trackEvent( BANNER_SEEN_TRACK_RATIO, 'banner-seen' );
+		impressionCounter.incrementImpressionCount();
+	} else {
+		mw.centralNotice.setBannerLoadedButHidden();
+	}
+
+	const closeClickEvent = () => {
+		trackEvent( BANNER_CLOSE_TRACK_RATIO, 'banner-closed' );
+		mw.centralNotice.hideBanner();
+	};
+
+	const trackedClickEvent = () => {
+		trackEvent( BANNER_CLICK_TRACK_RATIO, 'banner-button-clicked' );
+	};
+</script>
