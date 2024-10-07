@@ -1,0 +1,560 @@
+<style>
+	:root {
+		--banner-color-background: #111133;
+		--banner-color-primary: #ff9a50;
+		--banner-color-secondary: #ffffff;
+		--banner-color-outline: #919191;
+		--banner-color-black: #202122;
+		--banner-color-white: #ffffff;
+		--banner-color-pink: #c7006b;
+	}
+
+	.nw24 {
+		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+		width: 100%;
+		padding: 16px 0 0 0;
+		
+		position: relative;
+		background-color: #fff;
+
+		a {
+			text-decoration: none; /* No underline */
+			color: inherit; /* Inherit the color from parent element */
+		}
+
+			a:visited {
+			color: inherit; /* No change in color after being visited */
+		}
+
+		a:hover {
+			color: inherit; /* No change on hover */
+			text-decoration: none; /* No underline on hover */
+		}
+
+		a:focus, a:active {
+			color: inherit; /* No change in color on focus or active */
+			text-decoration: none; /* No underline on focus or active */
+		}
+
+		.nw24-title {
+			margin: 0 69px 4px 34px;
+			color: #202122;
+			font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+			font-size: 30px; /*6.25vw;*/
+			text-align: left;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			letter-spacing: normal;
+			line-height: 34.5px;
+		}
+		.nw24-subtitle {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			/*border: 1px solid #000;*/
+			padding-right: 38px;
+			padding-bottom: 20px;
+			.nw24-subtitle-text {
+				margin: 16px 69px 14px 35px;
+				color: #202122;
+				font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+				font-size: 23px;
+				line-height: 1.52;
+				letter-spacing: normal;
+				text-align: left;
+			}
+			.nw24-subtitle-icons {
+				display: flex;
+				justify-content: right;
+				align-items: center;
+				.cp-icon-page {
+					width: 70px;
+					height: 70px;
+					border-radius: 50%;
+					.cp-icon-page-inner {
+						margin-top: 8px;
+					}
+					.img-calendar {
+						padding: 10px 20px;
+						width: 30px;
+						margin: 0;
+						border: 0;
+						vertical-align: middle;
+					}
+					.img-folder {
+						padding: 10px 20px;
+						width: 30px;
+						margin: 0;
+						border: 0;
+						vertical-align: middle;
+					}
+					.img {
+						padding: 15px 20px;
+						width: 30px;
+						margin: 0;
+						border: 0;
+						vertical-align: middle;
+					}
+				}
+				.inner {
+					margin-left: 8px; 
+					margin-right: 8px;
+				}
+			}
+		}
+	
+		.nw24-button {
+			display: flex;
+			width: 100%;
+			.nw24-button-imgleft {
+				flex: 1;
+				background-size: 100% 100%; /*cover;*/  /* Ensure the image covers the entire div */
+				background-position: center; /* Center the background image */
+				background-repeat: no-repeat;
+				/*min-width: 320px;*/
+				}
+			.nw24-button-imgright {
+				display: flex;
+				align-items: left;
+				justify-content: flex-end;
+				/*width: 30%;*/ /* Adjust as needed */
+				
+				/*padding-top: 10px;
+				padding-right: 10px;
+				padding-bottom: 10px;*/
+			}
+			.nw24-button-imgright-icon {
+				width: 30px;
+				background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png'); /* Replace with your icon image */
+				background-size:  contain;
+				background-repeat: no-repeat;
+				margin-right: 10px;
+				margin-left: 10px;
+				margin-top: 20px;
+				}
+			.nw24-button-imgright-text {
+				margin: 15px 32px 15px 16px;
+				font-family: Arial;
+				font-size: 20px;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: italic;
+				line-height: 1.75;
+				letter-spacing: normal;
+				text-align: left;
+				color: #fff;
+			}
+		}
+		.nw24-close {
+			background: transparent url( 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Ic_close_36px.svg' ) no-repeat center;
+			background-size: cover;
+			cursor: pointer;
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			right: 10px;
+			top: 17px;
+
+			a {
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+	
+	
+	@media ( max-width: 600px ) {
+		#neuewege_banner_2024_1 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Banner_1_320.png");
+				}
+			}
+		}
+		#neuewege_banner_2024_2 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/64/Banner_2_320.png");
+				}
+			}
+		}
+	}
+	@media ( min-width: 601px ) and ( max-width: 1200px ) {
+		#neuewege_banner_2024_1 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Banner_1_600.png");
+				}
+			}
+		}
+		#neuewege_banner_2024_2 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Banner_2_600.png");
+				}
+			}
+		}
+	}
+	@media ( min-width: 1201px ) {
+		#neuewege_banner_2024_1 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/Banner_1_1200.png");
+				}
+			}
+		}
+		#neuewege_banner_2024_2 {
+			.nw24-button {
+				.nw24-button-imgleft {
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Banner_2_1200.png");
+				}
+			}
+		}
+	}
+	/* book icon stacked */
+	@media ( max-width: 800px ) {
+		.nw24 {
+			.nw24-button {
+				.nw24-button-imgright {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					background-color: #c00;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.nw24-button-imgright-text {
+					margin: 8px 10px 10px 16px;
+				}
+				.nw24-button-imgright-icon {
+					width: 30px;
+					
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 10px;
+					margin-left: 10px;
+					margin-top: 12px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	/* subtitle icons stacked */
+	@media ( max-width: 1000px ) {
+		.nw24 {
+			width: 98%; /* minerva skin causes a problem */
+			.nw24-title {
+				font-size: 26px;
+			}
+			.nw24-subtitle {
+				display: block;
+				justify-content: space-between;
+				align-items: center;
+				padding-right: 38px;
+				.nw24-subtitle-text {
+					margin-right: 10px;
+					font-size: 19px;
+				}
+				.nw24-subtitle-icons {
+					display: flex;
+					margin-left: 35px;
+					justify-content: left;
+					.inner {
+						margin-left: 16px; 
+						margin-right: 16px;
+					}
+					.cp-icon-page {
+						width: 60px;
+						height: 60px;
+						.img {
+							padding-top: 5px;
+                     		padding-left: 14px;
+                    	}
+						.img-calendar {
+							padding-top: 5px;
+                     		padding-left: 15px;
+						}
+						.img-folder {
+							padding-top: 5px;
+                     		padding-left: 15px;
+						}
+					}
+				}
+			}
+			
+			.nw24-button {
+				.nw24-button-imgright-text {
+					.nw24-button-imgright-text {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+</style>
+
+<script>
+	class ImpressionCounter {
+		constructor( bannerName ) {
+			this.itemName = 'banner_impressions-' + bannerName;
+			this.overallCount = 0;
+			if ( !window.localStorage ) {
+				return;
+			}
+			const overallCount = window.localStorage.getItem( this.itemName ) || '0';
+			this.overallCount = parseInt( overallCount, 10 );
+		}
+
+		incrementImpressionCount() {
+			this.overallCount++;
+			if ( !window.localStorage ) {
+				return;
+			}
+			window.localStorage.setItem( this.itemName, this.overallCount.toFixed( 0 ) );
+		}
+
+		getImpressionCount() {
+			if ( !window.localStorage ) {
+				return 0;
+			}
+			let impressions = window.localStorage.getItem( this.itemName );
+			if ( impressions === null ) {
+				impressions = 0;
+				window.localStorage.setItem( this.itemName, '0' );
+			}
+			return parseInt( impressions );
+		}
+	}
+
+	// returns 0 if no user group, 1 for group 1, 2 for group 2
+	const get_usergroup = () => {
+		// user group 1: user is active or passive reviewer
+		// user group 2: not a reviewer but at least 1 edit
+		
+		var userGroups = mw.config.get('wgUserGroups');
+
+		// Check if userGroups exists and includes either "editor" or "autoreview"
+		if (userGroups && (userGroups.includes('editor') || userGroups.includes('autoreview'))) {
+			return "1";
+		}
+
+		const editCount = mw.config.get( 'wgUserEditCount' );
+		if ( editCount >= 1 ) {
+			return "2";
+		}
+		return "0";
+	}
+
+	const BANNER_SEEN_TRACK_RATIO = 1;
+	const BANNER_CLICK_TRACK_RATIO = 1;
+	const BANNER_CLOSE_TRACK_RATIO = 1;
+
+	var usergroup = get_usergroup();
+	/*
+	debugging: set this value to "1" or "2"
+	usergroup = "1";
+	*/
+
+	const bannerName = "neuewege_banner_2024_"+usergroup; //neuewege_banner_2024_1,2,0
+	const banner = document.getElementById( bannerName );
+	const impressionCounter = new ImpressionCounter( bannerName );
+	
+	const trackEvent = ( trackingRatio, actionName ) => {
+		if ( Math.random() < trackingRatio ) {
+			mw.track( 'event.WMDEBannerInteractions', {
+				bannerName: bannerName,
+				bannerAction: actionName,
+				bannerImpressions: impressionCounter.getImpressionCount(),
+				userID: mw.user.getId()
+			} );
+		}
+	}
+
+	/**
+	 * This contains examples of how you might target a banner at a group of wikipedians.
+	 *
+	 * You can look through the mw object on wikipedia using the browser console for a more
+	 * comprehensive list of items stored about a person.
+	 *
+	 * @returns {boolean}
+	 */
+
+	const shouldShowBanner = () => {
+		/*
+		Deutschland, Schweiz, Österreich
+		Ausspielung: 100%
+		3x anzeigen
+		Startdatum: tbd.
+		Enddatum: tbd.
+		Laufzeit: 2 Wochen
+		*/
+		const urlParams = new URLSearchParams( window.location.search );
+		const pageName = mw.config.get( 'wgPageName' );
+		const loggedIn = mw.config.get( 'wgUserRegistration' );
+		const serverUrl = mw.config.get('wgServer');
+		
+		if ( urlParams.has( 'banner' ) ) {
+			return true;
+		}
+
+		if (!serverUrl.includes('.de.wikipedia.org') &&
+        	!serverUrl.includes('.at.wikipedia.org') &&
+        	!serverUrl.includes('.ch.wikipedia.org')) {
+        	return false;
+		}
+
+		if ( pageName === 'Wikipedia:A_NON_EXISTENT_PAGE' ) {
+			return false;
+		}
+
+		if ( !loggedIn ) {
+			return false;
+		}
+
+		if ( impressionCounter.getImpressionCount() >= 3 ) {
+			return false;
+		}
+
+		return true;
+	};
+	if ( shouldShowBanner() && (usergroup == "1" || usergroup == "2")) {
+		banner.style.display = 'block';
+		trackEvent( BANNER_SEEN_TRACK_RATIO, 'banner-seen' );
+		impressionCounter.incrementImpressionCount();
+	} else {
+		mw.centralNotice.setBannerLoadedButHidden();
+	}
+
+	const closeClickEvent = () => {
+		trackEvent( BANNER_CLOSE_TRACK_RATIO, 'banner-closed' );
+		mw.centralNotice.hideBanner();
+	};
+
+	const trackedClickEvent = () => {
+		trackEvent( BANNER_CLICK_TRACK_RATIO, 'banner-button-clicked' );
+	};
+</script>
+
+<div id="wmde-banner" class="wmde-b"  aria-live="polite" role="region" aria-labelledby="wmde-b-aria-label">
+	<div id="neuewege_banner_2024_1" class="nw24" style="display:none; border: solid 8px #f5cccc;"> <!-- Banner 1 -->
+		<span id="nw24-aria-label" style="display: none;">Gemeinsam für Wikipedia Banner</span>
+		<div class="nw24-close">
+			<a id="nw24-close-button" href="#" onclick="debugger; closeClickEvent();" title="Schließen">
+				<div class="nw24-close-button"></div>
+			</a>
+		</div>
+		<a id="nw24-link"
+		href="https://de.wikipedia.org/wiki/Wikipedia:Wikimedia_Deutschland/Community-Portal/Beteiligung/Lernen_und_reinfinden"
+		onclick="debugger; trackedClickEvent();">
+			<div class="nw24-inner">
+				<div class="nw24-title">Gemeinsam für Wikipedia: Neue Wege für deine Mitarbeit!</div>
+				<div class="nw24-subtitle">
+					<div class="nw24-subtitle-text">Entdecke im WMDE-Community-Portal Hilfestellungen für deine Wikipedia-Anfänge und Wege in die Community.</div>
+					<div class="nw24-subtitle-icons">
+						<div class="cp-icon-page" style="background-color:#E69138;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img-calendar" alt="Calendar"
+											src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/40px-Calendar-days-solid-white.svg.png"
+											decoding="async"  class="mw-file-element"
+											srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/60px-Calendar-days-solid-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/80px-Calendar-days-solid-white.svg.png 2x"
+											data-file-width="512" data-file-height="585"></span></span>
+							</p>
+						</div>
+						<div class="cp-icon-page inner" style="background-color:#741B47;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img" alt="Eine offen ausgestreckte Hand, über der ein Euro-Symbol schwebt."
+											src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/40px-Hand-holding-euro-solid-white.png"
+											decoding="async"  class="mw-file-element"
+											srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/60px-Hand-holding-euro-solid-white.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/80px-Hand-holding-euro-solid-white.png 2x"
+											data-file-width="2404" data-file-height="2138"></span></span>
+							</p>
+						</div>
+						<div class="cp-icon-page" style="background-color:#38761D;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img" alt="Die Umrisse dreier Figuren"
+											src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Users-solid-white.svg/40px-Users-solid-white.svg.png"
+											decoding="async"  class="mw-file-element"
+											srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Users-solid-white.svg/60px-Users-solid-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Users-solid-white.svg/80px-Users-solid-white.svg.png 2x"
+											data-file-width="512" data-file-height="410"></span></span>
+							</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="nw24-button">
+					<div class="nw24-button-imgleft"><!-- img --></div>
+					<div class="nw24-button-imgright" style="background-color: #c00;">
+						<div class="nw24-button-imgright-icon" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png);"><!-- icon --></div>
+						<div class="nw24-button-imgright-text">Zum Portal</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div id="neuewege_banner_2024_2"  class="nw24" style="display:none; border: solid 6px #d7e4d2;"> <!-- Banner 2 -->
+		<span id="nw24-aria-label" style="display: none;">Gemeinsam für Wikipedia Banner</span>
+		<div class="nw24-close">
+			<a id="nw24-close-button" href="#" onclick="debugger; closeClickEvent();" title="Schließen">
+				<div class="nw24-close-button"></div>
+			</a>
+		</div>
+		<a id="nw24-link"
+		href="https://de.wikipedia.org/wiki/Wikipedia:Wikimedia_Deutschland/Community-Portal/Weiterbildung/Angebote_nach_Themen"
+		onclick="debugger; trackedClickEvent();">
+			<div class="nw24-inner">
+				<div class="nw24-title">Gemeinsam für Wikipedia: Dein Einsatz, unsere Unterstützung!</div>
+				<div class="nw24-subtitle">
+					<div class="nw24-subtitle-text">Entdecke im WMDE-Community-Portal Unterstützung für deine Arbeit. Finde Fördermöglichkeiten, Projekte und Initiativen, um Wikipedia weiter voranzubringen.</div>
+					<div class="nw24-subtitle-icons">
+						<div class="cp-icon-page" style="background-color:#E69138;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img-calendar" alt="Calendar"
+											src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/40px-Calendar-days-solid-white.svg.png"
+											decoding="async"  class="mw-file-element"
+											srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/60px-Calendar-days-solid-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/80px-Calendar-days-solid-white.svg.png 2x"
+											data-file-width="512" data-file-height="585"></span></span>
+							</p>
+						</div>
+						<div class="cp-icon-page inner" style="background-color:#741B47;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img" alt="Eine offen ausgestreckte Hand, über der ein Euro-Symbol schwebt."
+											src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/40px-Hand-holding-euro-solid-white.png"
+											decoding="async"  class="mw-file-element"
+											srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/60px-Hand-holding-euro-solid-white.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/80px-Hand-holding-euro-solid-white.png 2x"
+											data-file-width="2404" data-file-height="2138"></span></span>
+							</p>
+						</div>
+						<div class="cp-icon-page" style="background-color:#CC0000;">
+							<p class="cp-icon-page-inner">
+								<span typeof="mw:File"><span><img class="img-folder" alt="Opened folder" 
+									src="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/40px-Leanpub-white.svg.png" 
+									decoding="async" width="40" height="36" class="mw-file-element" 
+									srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/60px-Leanpub-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/80px-Leanpub-white.svg.png 2x" 
+									data-file-width="512" data-file-height="455"></span></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="nw24-button">
+					<div class="nw24-button-imgleft"><!-- img --></div>
+					<div class="nw24-button-imgright" style="background-color: #38761d;">
+						<div class="nw24-button-imgright-icon" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/56/Icon-burger.png);"><!-- icon --></div>
+						<div class="nw24-button-imgright-text">Zum Portal</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<!--
+	TODO:
+		endgültiges x-icon in common hochladen und in element verlinken: .nw24-close {
+
+
+
+-->
