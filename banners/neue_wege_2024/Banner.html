@@ -339,12 +339,12 @@
 
 		// Check if userGroups exists and includes either "editor" or "autoreview"
 		if (userGroups && (userGroups.includes('editor') || userGroups.includes('autoreview'))) {
-			return "1";
+			return "2";
 		}
 
 		const editCount = mw.config.get( 'wgUserEditCount' );
 		if ( editCount >= 1 ) {
-			return "2";
+			return "1";
 		}
 		return "0";
 	}
