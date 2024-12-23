@@ -12,7 +12,7 @@
 	.nw24 {
 		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 		width: 100%;
-		padding: 16px 0 0 0;
+		padding: 8px 0 0 0; /* */
 		
 		position: relative;
 		background-color: #fff;
@@ -37,7 +37,7 @@
 		}
 
 		.nw24-title {
-			margin: 0 69px 4px 34px;
+			margin: 0 69px 4px 24px; /* 0 69px 4px 34px; */
 			color: #202122;
 			font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 			font-size: 30px; /*6.25vw;*/
@@ -112,17 +112,13 @@
 				background-size: 100% 100%; /*cover;*/  /* Ensure the image covers the entire div */
 				background-position: center; /* Center the background image */
 				background-repeat: no-repeat;
-				/*min-width: 320px;*/
+				
 				}
 			.nw24-button-imgright {
 				display: flex;
 				align-items: left;
 				justify-content: flex-end;
-				/*width: 30%;*/ /* Adjust as needed */
 				
-				/*padding-top: 10px;
-				padding-right: 10px;
-				padding-bottom: 10px;*/
 			}
 			.nw24-button-imgright-icon {
 				width: 30px;
@@ -134,7 +130,7 @@
 				margin-top: 20px;
 				}
 			.nw24-button-imgright-text {
-				margin: 15px 32px 15px 16px;
+				margin: 15px 24px 5px 16px;
 				font-family: Arial;
 				font-size: 20px;
 				font-weight: bold;
@@ -153,8 +149,8 @@
 			position: absolute;
 			width: 35px;
 			height: 35px;
-			right: 10px;
-			top: 17px;
+			right: 5px;
+        	top: 10px;
 
 			a {
 				display: inline-block;
@@ -228,7 +224,7 @@
 					align-items: center;
 				}
 				.nw24-button-imgright-text {
-					margin: 8px 10px 10px 16px;
+					margin: 0px 10px 4px 16px;
 				}
 				.nw24-button-imgright-icon {
 					width: 30px;
@@ -356,8 +352,9 @@
 	var usergroup = get_usergroup();
 	/*
 	debugging: set this value to "1" or "2"
-	usergroup = "1";
 	*/
+	/*usergroup = "2";*/
+	
 
 	const bannerName = "neuewege_banner_2024_"+usergroup; //neuewege_banner_2024_1,2,0
 	const banner = document.getElementById( bannerName );
