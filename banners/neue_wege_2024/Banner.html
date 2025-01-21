@@ -13,31 +13,30 @@
 		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 		width: 100%;
 		padding: 8px 0 0 0; /* */
-		
 		position: relative;
 		background-color: #fff;
-
-		a {
+	}
+	.nw24 a {
 			text-decoration: none; /* No underline */
 			color: inherit; /* Inherit the color from parent element */
-		}
+	}
 
-			a:visited {
+	.nw24 a:visited {
 			color: inherit; /* No change in color after being visited */
-		}
+	}
 
-		a:hover {
+	.nw24 a:hover {
 			color: inherit; /* No change on hover */
 			text-decoration: none; /* No underline on hover */
-		}
+	}
 
-		a:focus, a:active {
+	.nw24 a:focus, a:active {
 			color: inherit; /* No change in color on focus or active */
 			text-decoration: none; /* No underline on focus or active */
-		}
+	}
 
-		.nw24-title {
-			margin: 0 69px 4px 24px; /* 0 69px 4px 34px; */
+	.nw24 .nw24-title {
+			margin: 4px 69px 4px 24px; 
 			color: #202122;
 			font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 			font-size: 30px; /*6.25vw;*/
@@ -47,80 +46,80 @@
 			font-style: normal;
 			letter-spacing: normal;
 			line-height: 34.5px;
-		}
-		.nw24-subtitle {
+	}
+	.nw24 .nw24-subtitle {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			/*border: 1px solid #000;*/
 			padding-right: 38px;
 			padding-bottom: 20px;
-			.nw24-subtitle-text {
-				margin: 16px 69px 14px 35px;
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-text {
+				margin: 16px 69px 14px 24px;
 				color: #202122;
 				font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 				font-size: 23px;
 				line-height: 1.52;
 				letter-spacing: normal;
 				text-align: left;
-			}
-			.nw24-subtitle-icons {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons {
 				display: flex;
 				justify-content: right;
 				align-items: center;
-				.cp-icon-page {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page {
 					width: 70px;
 					height: 70px;
 					border-radius: 50%;
-					.cp-icon-page-inner {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .cp-icon-page-inner {
 						margin-top: 8px;
-					}
-					.img-calendar {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img-calendar {
 						padding: 10px 20px;
 						width: 30px;
 						margin: 0;
 						border: 0;
 						vertical-align: middle;
-					}
-					.img-folder {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img-folder {
 						padding: 10px 20px;
 						width: 30px;
 						margin: 0;
 						border: 0;
 						vertical-align: middle;
-					}
-					.img {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img {
 						padding: 15px 20px;
 						width: 30px;
 						margin: 0;
 						border: 0;
 						vertical-align: middle;
-					}
-				}
-				.inner {
+	}
+	.nw24 .nw24-subtitle .nw24-subtitle-icons .inner {
 					margin-left: 8px; 
 					margin-right: 8px;
-				}
-			}
-		}
+	}
 	
-		.nw24-button {
+	
+	.nw24 .nw24-button {
 			display: flex;
 			width: 100%;
-			.nw24-button-imgleft {
+	}
+	.nw24 .nw24-button .nw24-button-imgleft {
 				flex: 1;
 				background-size: 100% 100%; /*cover;*/  /* Ensure the image covers the entire div */
 				background-position: center; /* Center the background image */
 				background-repeat: no-repeat;
-				
-				}
-			.nw24-button-imgright {
+	}
+	.nw24 .nw24-button .nw24-button-imgright {
 				display: flex;
 				align-items: left;
 				justify-content: flex-end;
-				
-			}
-			.nw24-button-imgright-icon {
+	}
+	.nw24 .nw24-button .nw24-button-imgright-icon {
 				width: 30px;
 				background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png'); /* Replace with your icon image */
 				background-size:  contain;
@@ -128,8 +127,8 @@
 				margin-right: 10px;
 				margin-left: 10px;
 				margin-top: 20px;
-				}
-			.nw24-button-imgright-text {
+	}
+	.nw24 .nw24-button .nw24-button-imgright-text {
 				margin: 15px 24px 5px 16px;
 				font-family: Arial;
 				font-size: 20px;
@@ -140,80 +139,53 @@
 				letter-spacing: normal;
 				text-align: left;
 				color: #fff;
-			}
-		}
-		.nw24-close {
+	}
+	
+	.nw24 .nw24-close {
 			background: transparent url( 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Ic_close_36px.svg' ) no-repeat center;
 			background-size: cover;
 			cursor: pointer;
 			position: absolute;
 			width: 35px;
 			height: 35px;
-			right: 5px;
-        	top: 10px;
-
-			a {
+			right: 10px;
+        	top: 15px;
+	}
+	.nw24 .nw24-close a {
 				display: inline-block;
 				width: 22px;
 				height: 22px;
-			}
-		}
 	}
+	
 	
 	
 	@media ( max-width: 600px ) {
-		#neuewege_banner_2024_1 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Banner_1_320.png");
-				}
-			}
 		}
-		#neuewege_banner_2024_2 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/64/Banner_2_320.png");
-				}
-			}
 		}
 	}
 	@media ( min-width: 601px ) and ( max-width: 1200px ) {
-		#neuewege_banner_2024_1 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Banner_1_600.png");
-				}
-			}
 		}
-		#neuewege_banner_2024_2 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Banner_2_600.png");
-				}
-			}
 		}
 	}
 	@media ( min-width: 1201px ) {
-		#neuewege_banner_2024_1 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/Banner_1_1200.png");
-				}
-			}
 		}
-		#neuewege_banner_2024_2 {
-			.nw24-button {
-				.nw24-button-imgleft {
+		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Banner_2_1200.png");
-				}
-			}
 		}
 	}
 	/* book icon stacked */
 	@media ( max-width: 800px ) {
-		.nw24 {
-			.nw24-button {
-				.nw24-button-imgright {
+		.nw24 .nw24-button .nw24-button-imgright {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -222,74 +194,65 @@
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-				}
-				.nw24-button-imgright-text {
+		}
+		.nw24 .nw24-button .nw24-button-imgright-text {
 					margin: 0px 10px 4px 16px;
-				}
-				.nw24-button-imgright-icon {
+		}
+		.nw24 .nw24-button .nw24-button-imgright-icon {
 					width: 30px;
-					
 					background-size: contain;
 					background-repeat: no-repeat;
 					margin-right: 10px;
 					margin-left: 10px;
 					margin-top: 12px;
 					height: 30px;
-				}
-			}
 		}
 	}
 	/* subtitle icons stacked */
 	@media ( max-width: 1000px ) {
-		.nw24 {
-			width: 98%; /* minerva skin causes a problem */
-			.nw24-title {
+		.nw24 .nw24-title {
 				font-size: 26px;
-			}
-			.nw24-subtitle {
+		}
+		.nw24 .nw24-subtitle {
 				display: block;
 				justify-content: space-between;
 				align-items: center;
 				padding-right: 38px;
-				.nw24-subtitle-text {
+		}
+		.nw24 .nw24-subtitle .nw24-subtitle-text {
 					margin-right: 10px;
 					font-size: 19px;
-				}
-				.nw24-subtitle-icons {
+		}
+		.nw24 .nw24-subtitle .nw24-subtitle-icons {
 					display: flex;
 					margin-left: 35px;
 					justify-content: left;
-					.inner {
+		}
+		.nw24 .nw24-subtitle .nw24-subtitle-icons .inner {
 						margin-left: 16px; 
 						margin-right: 16px;
-					}
-					.cp-icon-page {
+		}
+		.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page {
 						width: 60px;
 						height: 60px;
-						.img {
+		}
+		.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img {
 							padding-top: 5px;
                      		padding-left: 14px;
-                    	}
-						.img-calendar {
+        }
+		.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img-calendar {
 							padding-top: 5px;
                      		padding-left: 15px;
-						}
-						.img-folder {
-							padding-top: 5px;
-                     		padding-left: 15px;
-						}
-					}
-				}
-			}
-			
-			.nw24-button {
-				.nw24-button-imgright-text {
-					.nw24-button-imgright-text {
-						font-size: 18px;
-					}
-				}
-			}
 		}
+		.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page .img-folder {
+							padding-top: 5px;
+                     		padding-left: 15px;
+		}
+					
+		.nw24 .nw24-button .nw24-button-imgright-text .nw24-button-imgright-text {
+						font-size: 18px;
+		}
+		
 	}
 </style>
 
@@ -353,9 +316,8 @@
 	/*
 	debugging: set this value to "1" or "2"
 	*/
-	/*usergroup = "2";*/
+	//usergroup = "1";
 	
-
 	const bannerName = "neuewege_banner_2024_"+usergroup; //neuewege_banner_2024_1,2,0
 	const banner = document.getElementById( bannerName );
 	const impressionCounter = new ImpressionCounter( bannerName );
@@ -398,21 +360,7 @@
 			return true;
 		}
 
-		if (!serverUrl.includes('.de.wikipedia.org') &&
-        	!serverUrl.includes('.at.wikipedia.org') &&
-        	!serverUrl.includes('.ch.wikipedia.org')) {
-        	return false;
-		}
-
 		if ( pageName === 'Wikipedia:A_NON_EXISTENT_PAGE' ) {
-			return false;
-		}
-
-		if ( !loggedIn ) {
-			return false;
-		}
-
-		if ( impressionCounter.getImpressionCount() >= 3 ) {
 			return false;
 		}
 
@@ -437,17 +385,19 @@
 </script>
 
 <div id="wmde-banner" class="wmde-b"  aria-live="polite" role="region" aria-labelledby="wmde-b-aria-label">
-	<div id="neuewege_banner_2024_1" class="nw24" style="display:none; border: solid 8px #f5cccc;"> <!-- Banner 1 -->
+	<div id="neuewege_banner_2024_0" class="nw24" style="display:none;"> <!-- empty Banner 0 -->
+	</div>
+	<div id="neuewege_banner_2024_1" class="nw24" style="display:none;"> <!-- Banner 1 -->
 		<span id="nw24-aria-label" style="display: none;">Gemeinsam für Wikipedia Banner</span>
 		<div class="nw24-close">
-			<a id="nw24-close-button" href="#" onclick="debugger; closeClickEvent();" title="Schließen">
+			<a id="nw24-close-button" href="#" onclick="closeClickEvent();" title="Schließen">
 				<div class="nw24-close-button"></div>
 			</a>
 		</div>
 		<a id="nw24-link"
 		href="https://de.wikipedia.org/wiki/Wikipedia:Wikimedia_Deutschland/Community-Portal/Beteiligung/Lernen_und_reinfinden"
-		onclick="debugger; trackedClickEvent();">
-			<div class="nw24-inner">
+		onclick="trackedClickEvent();">
+			<div class="nw24-inner" style="border: solid 8px #f5cccc;">
 				<div class="nw24-title">Gemeinsam für Wikipedia: Neue Wege für deine Mitarbeit!</div>
 				<div class="nw24-subtitle">
 					<div class="nw24-subtitle-text">Entdecke im WMDE-Community-Portal Hilfestellungen für deine Wikipedia-Anfänge und Wege in die Community.</div>
@@ -492,17 +442,17 @@
 			</div>
 		</a>
 	</div>
-	<div id="neuewege_banner_2024_2"  class="nw24" style="display:none; border: solid 6px #d7e4d2;"> <!-- Banner 2 -->
+	<div id="neuewege_banner_2024_2"  class="nw24" style="display:none;"> <!-- Banner 2 -->
 		<span id="nw24-aria-label" style="display: none;">Gemeinsam für Wikipedia Banner</span>
 		<div class="nw24-close">
-			<a id="nw24-close-button" href="#" onclick="debugger; closeClickEvent();" title="Schließen">
+			<a id="nw24-close-button" href="#" onclick="closeClickEvent();" title="Schließen">
 				<div class="nw24-close-button"></div>
 			</a>
 		</div>
 		<a id="nw24-link"
 		href="https://de.wikipedia.org/wiki/Wikipedia:Wikimedia_Deutschland/Community-Portal/Weiterbildung/Angebote_nach_Themen"
-		onclick="debugger; trackedClickEvent();">
-			<div class="nw24-inner">
+		onclick="trackedClickEvent();">
+			<div class="nw24-inner" style="border: solid 6px #d7e4d2;">
 				<div class="nw24-title">Gemeinsam für Wikipedia: Dein Einsatz, unsere Unterstützung!</div>
 				<div class="nw24-subtitle">
 					<div class="nw24-subtitle-text">Entdecke im WMDE-Community-Portal Unterstützung für deine Arbeit. Finde Fördermöglichkeiten, Projekte und Initiativen, um Wikipedia weiter voranzubringen.</div>
@@ -547,11 +497,3 @@
 		</a>
 	</div>
 </div>
-
-<!--
-	TODO:
-		endgültiges x-icon in common hochladen und in element verlinken: .nw24-close {
-
-
-
--->
