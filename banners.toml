@@ -11,3 +11,17 @@ description = "Community survey banner for 2024 (https://www.figma.com/design/Th
 link = "/wikidata/Wikidata:Main_Page?devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
 filename = "./banners/wikidata_survey_2024/devBanner.js"
 ticket = "https://phabricator.wikimedia.org/T366881"
+
+[neue_wege_2024_minerva]
+name = "Neue Wege 2024 minerva skin"
+description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
+filename = "./banners/neue_wege_2024/devBanner.js"
+ticket = ""
+
+[neue_wege_2024_vector]
+name = "Neue Wege 2024 vector skin"
+description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Vector&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
+filename = "./banners/neue_wege_2024/devBanner.js"
+ticket = ""
