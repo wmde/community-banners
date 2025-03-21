@@ -288,6 +288,14 @@
 </style>
 
 <script>
+	const BANNER_SEEN_TRACK_RATIO = 1;
+	const BANNER_CLICK_TRACK_RATIO = 1;
+	const BANNER_CLOSE_TRACK_RATIO = 1;
+
+	const USER_GROUP_REVIEWER = 1;
+	const USER_GROUP_HAS_EDITS = 2;
+	const DO_NOT_SHOW_BANNER = 0;
+
 	class ImpressionCounter {
 		constructor( bannerName ) {
 			this.itemName = 'banner_impressions-' + bannerName;
@@ -320,36 +328,36 @@
 		}
 	}
 
-	// returns 0 if no user group, 1 for group 1, 2 for group 2
-	const get_usergroup = () => {
-		// user group 1: user is active or passive reviewer
-		// user group 2: not a reviewer but at least 1 edit
+	/**
+	 * USER_GROUP_REVIEWER (1): user is active or passive reviewer
+	 * USER_GROUP_HAS_EDITS (2): not a reviewer but at least 1 edit
+	 * DO_NOT_SHOW_BANNER (0): not one of the targeted groups
+	 *
+	 * @returns {int}
+	 */
+	const getUserGroup = () => {
+		const urlParams = new URLSearchParams( window.location.search );
 
-		var userGroups = mw.config.get( 'wgUserGroups' );
+		if ( urlParams.has( 'group' ) ) {
+			return parseInt( urlParams.get( 'group' ) );
+		}
 
-		// Check if userGroups exists and includes either "editor" or "autoreview"
+		const userGroups = mw.config.get( 'wgUserGroups' );
+
 		if ( userGroups && ( userGroups.includes( 'editor' ) || userGroups.includes( 'autoreview' ) ) ) {
-			return '2';
+			return USER_GROUP_REVIEWER;
 		}
 
 		const editCount = mw.config.get( 'wgUserEditCount' );
 		if ( editCount >= 1 ) {
-			return '1';
+			return USER_GROUP_HAS_EDITS;
 		}
-		return '0';
+
+		return DO_NOT_SHOW_BANNER;
 	}
 
-	const BANNER_SEEN_TRACK_RATIO = 1;
-	const BANNER_CLICK_TRACK_RATIO = 1;
-	const BANNER_CLOSE_TRACK_RATIO = 1;
-
-	var usergroup = get_usergroup();
-	/*
-	debugging: set this value to "1" or "2"
-	*/
-	//usergroup = "1";
-
-	const bannerName = 'neuewege_banner_2024_' + usergroup; //neuewege_banner_2024_1,2,0
+	const userGroup = getUserGroup();
+	const bannerName = 'neuewege_banner_2024_' + userGroup;
 	const banner = document.getElementById( bannerName );
 	const impressionCounter = new ImpressionCounter( bannerName );
 
@@ -365,39 +373,23 @@
 	}
 
 	/**
-	 * This contains examples of how you might target a banner at a group of wikipedians.
+	 * A ?banner URL param means that this is the development or test environment
 	 *
-	 * You can look through the mw object on wikipedia using the browser console for a more
-	 * comprehensive list of items stored about a person.
+	 * Show the banner if the user is in one of the 2 targeted groups
 	 *
 	 * @returns {boolean}
 	 */
-
 	const shouldShowBanner = () => {
-		/*
-		Deutschland, Schweiz, Österreich
-		Ausspielung: 100%
-		3x anzeigen
-		Startdatum: tbd.
-		Enddatum: tbd.
-		Laufzeit: 2 Wochen
-		*/
 		const urlParams = new URLSearchParams( window.location.search );
-		const pageName = mw.config.get( 'wgPageName' );
-		const loggedIn = mw.config.get( 'wgUserRegistration' );
-		const serverUrl = mw.config.get( 'wgServer' );
 
 		if ( urlParams.has( 'banner' ) ) {
 			return true;
 		}
 
-		if ( pageName === 'Wikipedia:A_NON_EXISTENT_PAGE' ) {
-			return false;
-		}
-
-		return true;
+		return [ USER_GROUP_REVIEWER, USER_GROUP_HAS_EDITS ].includes( userGroup );
 	};
-	if ( shouldShowBanner() && ( usergroup == '1' || usergroup == '2' ) ) {
+
+	if ( shouldShowBanner() ) {
 		banner.style.display = 'block';
 		trackEvent( BANNER_SEEN_TRACK_RATIO, 'banner-seen' );
 		impressionCounter.incrementImpressionCount();
