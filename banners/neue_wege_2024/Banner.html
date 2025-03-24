@@ -36,7 +36,7 @@
 	}
 
 	.nw24 .nw24-title {
-			margin: 4px 69px 4px 24px; 
+			margin: 4px 69px 4px 24px;
 			color: #202122;
 			font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 			font-size: 30px; /*6.25vw;*/
@@ -99,11 +99,11 @@
 						vertical-align: middle;
 	}
 	.nw24 .nw24-subtitle .nw24-subtitle-icons .inner {
-					margin-left: 8px; 
+					margin-left: 8px;
 					margin-right: 8px;
 	}
-	
-	
+
+
 	.nw24 .nw24-button {
 			display: flex;
 			width: 100%;
@@ -140,7 +140,7 @@
 				text-align: left;
 				color: #fff;
 	}
-	
+
 	.nw24 .nw24-close {
 			background: transparent url( 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Ic_close_36px.svg' ) no-repeat center;
 			background-size: cover;
@@ -156,9 +156,9 @@
 				width: 22px;
 				height: 22px;
 	}
-	
-	
-	
+
+
+
 	@media ( max-width: 600px ) {
 		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
 					background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Banner_1_320.png");
@@ -229,7 +229,7 @@
 					justify-content: left;
 		}
 		.nw24 .nw24-subtitle .nw24-subtitle-icons .inner {
-						margin-left: 16px; 
+						margin-left: 16px;
 						margin-right: 16px;
 		}
 		.nw24 .nw24-subtitle .nw24-subtitle-icons .cp-icon-page {
@@ -248,11 +248,11 @@
 							padding-top: 5px;
                      		padding-left: 15px;
 		}
-					
+
 		.nw24 .nw24-button .nw24-button-imgright-text .nw24-button-imgright-text {
 						font-size: 18px;
 		}
-		
+
 	}
 </style>
 
@@ -291,13 +291,13 @@
 
 	// returns 0 if no user group, 1 for group 1, 2 for group 2
 	const get_usergroup = () => {
-		// user group 1: user is active or passive reviewer
-		// user group 2: not a reviewer but at least 1 edit
-		
+		// user group 1: not a reviewer but at least 1 edit
+		// user group 2: user is active AND passive reviewer
+
 		var userGroups = mw.config.get('wgUserGroups');
 
-		// Check if userGroups exists and includes either "editor" or "autoreview"
-		if (userGroups && (userGroups.includes('editor') || userGroups.includes('autoreview'))) {
+		// Check if userGroups exists and includes "editor" and "autoreview"
+		if (userGroups && (userGroups.includes('editor') && userGroups.includes('autoreview'))) {
 			return "2";
 		}
 
@@ -317,11 +317,11 @@
 	debugging: set this value to "1" or "2"
 	*/
 	//usergroup = "1";
-	
+
 	const bannerName = "neuewege_banner_2024_"+usergroup; //neuewege_banner_2024_1,2,0
 	const banner = document.getElementById( bannerName );
 	const impressionCounter = new ImpressionCounter( bannerName );
-	
+
 	const trackEvent = ( trackingRatio, actionName ) => {
 		if ( Math.random() < trackingRatio ) {
 			mw.track( 'event.WMDEBannerInteractions', {
@@ -355,7 +355,7 @@
 		const pageName = mw.config.get( 'wgPageName' );
 		const loggedIn = mw.config.get( 'wgUserRegistration' );
 		const serverUrl = mw.config.get('wgServer');
-		
+
 		if ( urlParams.has( 'banner' ) ) {
 			return true;
 		}
@@ -429,7 +429,7 @@
 											data-file-width="512" data-file-height="410"></span></span>
 							</p>
 						</div>
-						
+
 					</div>
 				</div>
 				<div class="nw24-button">
@@ -477,10 +477,10 @@
 						</div>
 						<div class="cp-icon-page" style="background-color:#CC0000;">
 							<p class="cp-icon-page-inner">
-								<span typeof="mw:File"><span><img class="img-folder" alt="Opened folder" 
-									src="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/40px-Leanpub-white.svg.png" 
-									decoding="async" width="40" height="36" class="mw-file-element" 
-									srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/60px-Leanpub-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/80px-Leanpub-white.svg.png 2x" 
+								<span typeof="mw:File"><span><img class="img-folder" alt="Opened folder"
+									src="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/40px-Leanpub-white.svg.png"
+									decoding="async" width="40" height="36" class="mw-file-element"
+									srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/60px-Leanpub-white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/80px-Leanpub-white.svg.png 2x"
 									data-file-width="512" data-file-height="455"></span></span>
 							</p>
 						</div>
