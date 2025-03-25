@@ -12,16 +12,30 @@ link = "/wikidata/Wikidata:Main_Page?devbanner={{banner}}&banner=B24_WMDE_Commun
 filename = "./banners/wikidata_survey_2024/devBanner.js"
 ticket = "https://phabricator.wikimedia.org/T366881"
 
-[neue_wege_2024_minerva]
-name = "Neue Wege 2024 minerva skin"
+[neue_wege_2024_minerva_autoreview]
+name = "Neue Wege 2024 Minerva/Autoreview"
 description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
-link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner&group=2"
 filename = "./banners/neue_wege_2024/devBanner.js"
 ticket = ""
 
-[neue_wege_2024_vector]
-name = "Neue Wege 2024 vector skin"
+[neue_wege_2024_minerva_edits]
+name = "Neue Wege 2024 Minerva/Edits"
 description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
-link = "/wiki/Wikipedia:Hauptseite?useskin=Vector&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner&group=1"
+filename = "./banners/neue_wege_2024/devBanner.js"
+ticket = ""
+
+[neue_wege_2024_vector_autoreview]
+name = "Neue Wege 2024 Vector/Autoreview"
+description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Vector&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner&group=2"
+filename = "./banners/neue_wege_2024/devBanner.js"
+ticket = ""
+
+[neue_wege_2024_vector_edits]
+name = "Neue Wege 2024 Vector/Edits"
+description = "Community survey banner for 2024 (https://www.figma.com/design/L3IyUHD4M9uZseALX1VUs7/Untitled?node-id=0-1&node-type=CANVAS&t=2YC0znR6yC8wjHwp-0)"
+link = "/wiki/Wikipedia:Hauptseite?useskin=Vector&devbanner={{banner}}&banner=B24_WMDE_Community_Dev_Banner&group=1"
 filename = "./banners/neue_wege_2024/devBanner.js"
 ticket = ""
