@@ -14,6 +14,7 @@
 		display: none;
 	}
 
+	/* stylelint-disable selector-class-pattern */
 	.neuewege_banner_2024_1 #neuewege_banner_2024_1 {
 		display: block;
 	}
@@ -21,6 +22,7 @@
 	.neuewege_banner_2024_2 #neuewege_banner_2024_2 {
 		display: block;
 	}
+	/* stylelint-enable selector-class-pattern */
 
 	.nw24 {
 		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -44,7 +46,8 @@
 		text-decoration: none; /* No underline on hover */
 	}
 
-	.nw24 a:focus, a:active {
+	.nw24 a:focus,
+	a:active {
 		color: inherit; /* No change in color on focus or active */
 		text-decoration: none; /* No underline on focus or active */
 	}
@@ -125,7 +128,6 @@
 		margin-right: 8px;
 	}
 
-
 	.nw24 .nw24-button {
 		display: flex;
 		width: 100%;
@@ -145,7 +147,7 @@
 
 	.nw24 .nw24-button .nw24-button-imgright-icon {
 		width: 30px;
-		background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png'); /* Replace with your icon image */
+		background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png' ); /* Replace with your icon image */
 		background-size: contain;
 		background-repeat: no-repeat;
 		margin-right: 10px;
@@ -155,7 +157,7 @@
 
 	.nw24 .nw24-button .nw24-button-imgright-text {
 		margin: 15px 24px 5px 16px;
-		font-family: Arial, 'Helvetica Neue', 'Helvetica', sans-serif;
+		font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 		font-size: 20px;
 		font-weight: bold;
 		font-stretch: normal;
@@ -167,7 +169,7 @@
 	}
 
 	.nw24 .nw24-close {
-		background: transparent url('https://upload.wikimedia.org/wikipedia/commons/b/b3/Ic_close_36px.svg') no-repeat center;
+		background: transparent url( 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Ic_close_36px.svg' ) no-repeat center;
 		background-size: cover;
 		cursor: pointer;
 		position: absolute;
@@ -183,34 +185,33 @@
 		height: 22px;
 	}
 
-
 	@media ( max-width: 600px ) {
 		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Banner_1_320.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Banner_1_320.png' );
 		}
 
 		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/64/Banner_2_320.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/6/64/Banner_2_320.png' );
 		}
 	}
 
 	@media ( min-width: 601px ) and ( max-width: 1200px ) {
 		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Banner_1_600.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Banner_1_600.png' );
 		}
 
 		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Banner_2_600.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Banner_2_600.png' );
 		}
 	}
 
 	@media ( min-width: 1201px ) {
 		#neuewege_banner_2024_1 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/Banner_1_1200.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/8/80/Banner_1_1200.png' );
 		}
 
 		#neuewege_banner_2024_2 .nw24-button .nw24-button-imgleft {
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Banner_2_1200.png");
+			background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Banner_2_1200.png' );
 		}
 	}
 
@@ -291,7 +292,6 @@
 		.nw24 .nw24-button .nw24-button-imgright-text .nw24-button-imgright-text {
 			font-size: 18px;
 		}
-
 	}
 </style>
 
@@ -337,7 +337,7 @@
 	}
 
 	/**
-	 * USER_GROUP_REVIEWER: user is active or passive reviewer
+	 * USER_GROUP_REVIEWER: user is active and passive reviewer
 	 * USER_GROUP_HAS_EDITS: not a reviewer but at least 1 edit
 	 * DO_NOT_SHOW_BANNER: not one of the targeted groups
 	 *
@@ -352,7 +352,7 @@
 
 		const userGroups = mw.config.get( 'wgUserGroups' );
 
-		if ( userGroups && ( userGroups.includes( 'editor' ) || userGroups.includes( 'autoreview' ) ) ) {
+		if ( userGroups && ( userGroups.includes( 'editor' ) && userGroups.includes( 'autoreview' ) ) ) {
 			return USER_GROUP_REVIEWER;
 		}
 
@@ -432,7 +432,7 @@
 				<div class="nw24-subtitle">
 					<div class="nw24-subtitle-text">Entdecke im WMDE-Community-Portal Hilfestellungen für deine Wikipedia-Anfänge und Wege in die Community.</div>
 					<div class="nw24-subtitle-icons">
-						<div class="cp-icon-page" style="background-color:#e69138;">
+						<div class="cp-icon-page" style="background-color: #e69138;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Calendar"
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/40px-Calendar-days-solid-white.svg.png"
@@ -441,7 +441,7 @@
 									data-file-width="512" data-file-height="585"></span></span>
 							</p>
 						</div>
-						<div class="cp-icon-page inner" style="background-color:#741b47;">
+						<div class="cp-icon-page inner" style="background-color: #741b47;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Eine offen ausgestreckte Hand, über der ein Euro-Symbol schwebt."
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/40px-Hand-holding-euro-solid-white.png"
@@ -450,7 +450,7 @@
 									data-file-width="2404" data-file-height="2138"></span></span>
 							</p>
 						</div>
-						<div class="cp-icon-page" style="background-color:#38761d;">
+						<div class="cp-icon-page" style="background-color: #38761d;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Die Umrisse dreier Figuren"
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Users-solid-white.svg/40px-Users-solid-white.svg.png"
@@ -465,7 +465,7 @@
 				<div class="nw24-button">
 					<div class="nw24-button-imgleft"><!-- img --></div>
 					<div class="nw24-button-imgright" style="background-color: #cc0000;">
-						<div class="nw24-button-imgright-icon" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png);"><!-- icon --></div>
+						<div class="nw24-button-imgright-icon" style="background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Icon-book.png' );"><!-- icon --></div>
 						<div class="nw24-button-imgright-text">Zum Portal</div>
 					</div>
 				</div>
@@ -489,7 +489,7 @@
 													Wikipedia weiter voranzubringen.
 					</div>
 					<div class="nw24-subtitle-icons">
-						<div class="cp-icon-page" style="background-color:#e69138;">
+						<div class="cp-icon-page" style="background-color: #e69138;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Calendar"
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Calendar-days-solid-white.svg/40px-Calendar-days-solid-white.svg.png"
@@ -498,7 +498,7 @@
 									data-file-width="512" data-file-height="585"></span></span>
 							</p>
 						</div>
-						<div class="cp-icon-page inner" style="background-color:#741b47;">
+						<div class="cp-icon-page inner" style="background-color: #741b47;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Eine offen ausgestreckte Hand, über der ein Euro-Symbol schwebt."
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hand-holding-euro-solid-white.png/40px-Hand-holding-euro-solid-white.png"
@@ -507,7 +507,7 @@
 									data-file-width="2404" data-file-height="2138"></span></span>
 							</p>
 						</div>
-						<div class="cp-icon-page" style="background-color:#cc0000;">
+						<div class="cp-icon-page" style="background-color: #cc0000;">
 							<p class="cp-icon-page-inner">
 								<span typeof="mw:File"><span><img alt="Opened folder"
 									src="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Leanpub-white.svg/40px-Leanpub-white.svg.png"
@@ -521,7 +521,7 @@
 				<div class="nw24-button">
 					<div class="nw24-button-imgleft"><!-- img --></div>
 					<div class="nw24-button-imgright" style="background-color: #38761d;">
-						<div class="nw24-button-imgright-icon" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/56/Icon-burger.png);">
+						<div class="nw24-button-imgright-icon" style="background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/5/56/Icon-burger.png' );">
 							<!-- icon --></div>
 						<div class="nw24-button-imgright-text">Zum Portal</div>
 					</div>
