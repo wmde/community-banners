@@ -7,6 +7,9 @@ updates:
       directory: "/" # Location of package manifests
       schedule:
           interval: "monthly"
+      # Turn off dependabot until we have a clear upgrade path to ESLint 9
+      # See https://phabricator.wikimedia.org/T387567
+      open-pull-requests-limit: 0
       groups:
           minor-version-updates:
               update-types:
